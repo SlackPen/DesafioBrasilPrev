@@ -152,8 +152,9 @@ class Jogo():
                     ret = self.switch_Perfil(i.Perfil, i, self.Tabuleiro.Casas[i.PosTab])
                 except Exception as e:
                     #print('Erro posicionamento de casas. Falha na lógica', e) 
-                    sys.exit(-1)
-                    set_trace()
+                    #sys.exit(-1)
+                    #set_trace()
+                    pass
                     
 
                 #Verdadeiro então compra a propriedade
@@ -167,6 +168,7 @@ class Jogo():
                     Valor = self.Tabuleiro.Casas[i.PosTab]['ValorAluguel'] 
                     if not self.Tabuleiro.Casas[i.PosTab]['Proprietario'] == None and self.Tabuleiro.Casas[i.PosTab]['Proprietario'] != i :
                         i.Saldo -= Valor
+                        self.Tabuleiro.Casas[i.PosTab]['Proprietario'].Saldo += Valor
                         #print('Jogador {} pagou aluguel de {} na casa {} esta com o saldo de {}'.format(i.Nome, Valor, self.Tabuleiro.Casas[i.PosTab]['Index'], i.Saldo))
                     else:
                         #print('Jogador {} está na  casa {} e tem saldo de {}'.format(i.Nome, self.Tabuleiro.Casas[i.PosTab]['Index'], i.Saldo))
