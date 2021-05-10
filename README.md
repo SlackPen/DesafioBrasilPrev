@@ -1,4 +1,8 @@
 # DesafioBrasilPrev
 Programa simulador de banco imobiliario
 
-Para executar o programa favor digitar: python Jogo.py
+Favor instalar as dependências discriminadas no arquivo requirements.txt:
+   pip install -r requirements.txt
+
+Para executar o programa favor digitar: 
+   python Jogo.py

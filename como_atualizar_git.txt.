@@ -1,0 +1,6 @@
+git add . 
+git commit -m "Correção no pagamento do alugel, proprietario não estava recebendo." 
+git remote add origin https://github.com/SlackPen/DesafioBrasilPrev.git
+git push -u origin
+
+git log --oneline --graph --decorate --all
